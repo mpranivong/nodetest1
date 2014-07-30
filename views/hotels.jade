@@ -1,8 +1,16 @@
 extends layout
 
 block content
-  h1= Hotel List
-  ul
-  	each hotel, i in hotellist
-  		li
-  			a(href="")= hotel.url
+	h1 Hotel List
+	ul
+		if hotellist !== undefined
+			each hotel, i in hotellist
+				li
+					a(href="")= hotel.url
+	hr
+	h1 Search Hotel
+	form#formSearchHotel<name='searchHotel',method='post',action='/searchhotel')
+	input#inputHotelCityState(type='text',placeholder='city,state',name='hotelcitystate')
+	br
+	input#
+				

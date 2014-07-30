@@ -67,5 +67,9 @@ app.use(function(err, req, res, next) {
     });
 });
 
+//search for hotels by city,state
+app.post('/searchhotel', function(req,res){
+	console.log(req.body);
+});
 
 module.exports = app;
