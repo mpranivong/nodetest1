@@ -9,8 +9,8 @@ block content
 					a(href="")= hotel.url
 	hr
 	h1 Search Hotel
-	form#formSearchHotel<name='searchHotel',method='post',action='/searchhotel')
-	input#inputHotelCityState(type='text',placeholder='city,state',name='hotelcitystate')
-	br
-	input#
-				
+	form(name='searchhotel',action='/hotels/searchhotel',method='post')
+		input(type='text',placeholder='city,state',name='hotelcitystate')
+		input(type='text',placeholder='url',name='hotelurl')
+		
+		input(type='submit',value='Search')
